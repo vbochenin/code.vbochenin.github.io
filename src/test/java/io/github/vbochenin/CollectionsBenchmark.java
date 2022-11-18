@@ -1,11 +1,15 @@
 package io.github.vbochenin;
 
-import org.junit.runner.RunWith;
-import org.openjdk.jmh.annotations.*;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import org.junit.runner.RunWith;
+import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.Level;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.Setup;
+import org.openjdk.jmh.annotations.State;
 
 @RunWith(BenchmarkRunner.class)
 public class CollectionsBenchmark {
@@ -28,11 +32,10 @@ public class CollectionsBenchmark {
         private final List<Object> linkedList = new LinkedList<>();
 
         private Object element;
+
         @Setup(Level.Iteration)
         public void setUp() {
-            this.element = new Object();
+            element = new Object();
         }
-
-
     }
 }
