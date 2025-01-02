@@ -12,6 +12,7 @@
         <module>benchmark-runner</module>
         <module>memory-usage</module>
         <module>accidental-logforging</module>
+        <module>hashmap-error</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
