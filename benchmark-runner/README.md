@@ -1,3 +1,3 @@
-# benchmark-runner
+# Accidental logforging
 
-The code example used in [just-another-way-to-run-jmh-benchmark-with-eclipse](https://dev.to/vbochenin/just-another-way-to-run-jmh-benchmark-with-eclipse-4565)
+The code example used in [Accidental logforging](https://vbochenin.github.io/accidental-logforging)
