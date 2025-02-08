@@ -1,0 +1,22 @@
+<configuration>
+    <conversionRule conversionWord="crlf"
+                    converterClass="org.owasp.security.logging.mask.NLFConverter" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %crlf(%msg) %n</pattern>
+        </encoder>
+    </appender>
+    <property name="LOG_DIR" value="log" />
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_DIR}/code4food/accidental-logforging.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %crlf(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
